@@ -1,13 +1,265 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Quicksand";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: black;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+  text-decoration: underline;
+  border-bottom: #007BFF;
+  padding-bottom: 14px;
+}
+.home{
+  padding-top: 80px;
+  padding-left: 120px;
+}
+.myself{
+  width: 50%;
+  float: left;
+}
+.slider {
+  width: 0;
+  height: 10px;
+  background-color: #007BFF;
+  position: relative;
+  animation: moveSlider 2s linear infinite; 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes moveSlider {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%; 
+  }
+}
+
+.myself h1{
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+.myself p{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.myself img{
+  max-width: 40px;
+  max-height: 28px;
+}
+.profilelink{
+  margin: 10px;
+  padding: 20px auto;
+}
+.profilelink img{
+  max-width: 40px;
+  min-width: 40px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.myimage{
+  width: 50%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myimage img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 500px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 50%; 
+  border: 5px solid #f2f2f2;
+}
+
+.myimage img:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+.language img{
+  width: 40px;
+  height: 40px;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+.tech{
+  display: flex;
+  float: inline-start;
+  padding-top: 50px;
+}
+.tech img{
+  padding-left: 30px;
+  width: 30px;
+  height: 30px;
+}
+.about{
+  margin: 200px;
+
+}
+.aboutme{
+  width: 50%;
+  float: right;
+  font-size: 20px;
+  padding-top:30px ;
+}
+
+.aboutme h2 {
+  color: #007BFF;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 24px; 
+  margin-bottom: 10px; 
+  text-decoration: underline; 
+  opacity: 0; 
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+.aboutme h2.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.aboutme img{
+  width: 30px;
+  height: 20px;
+  border-radius: 10px;
+}
+.image{
+  width: 50%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image img{
+  width: 400px;
+  height: 300px;
+  border: 2px solid #007BFF;
+  border-radius: 100px;
+}
+.image img:hover {
+  transform: scale(1.1); 
+}
+
+.headings{
+  position: relative;
+  text-align: center;
+  align-items: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-size: 40px;
+}
+.headings img{
+  height: 50px;
+}
+.contacts{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  margin-left: 38%;
+  margin-right: 38%;
+  border-radius: 18px;
+  padding: 8px;
+}
+.headings h1{
+  font-family: 'Times New Roman';
+  color: #007BFF;
+}
+.headings p{
+  animation: fadeIn 1s ease-in-out 0.5 forwards;
+}
+.contacts img{
+  height: 30px;
+  width: 40px;
+  padding-right: 8px;
+}
+.reserve{
+  background-color: npmrgb(248, 248, 248);
+  color: white !important;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px;
+}
+.boxes{
+  width: 100%;
+}
+.projects{
+  background: #fff;
+  border-radius: 8px;
+  max-width: 400px;
+  margin-left: 40px;
+  margin-top: 40px;
+  background: #FBE4D8;
+  transition: transform 0.5s;
+}
+
+.projects img{
+  height: 150px;
+  width: 300px;
+  padding: 10px;
+  margin: 40px 40px 5px;
+  display: flex;
+  border-bottom: 1px solid #333;
+}
+
+.projects p{
+  margin-left: 40px;
+  margin-top: 8px;
+  padding-bottom: 10px;
+  max-width: 300px;
+}
+.projects a{
+  margin-left:160px ;
+  text-decoration: none;
+  font-weight:bold;
+}
+.projects a:hover{
+  text-decoration: underline;
+  color: #f1356d;
+}
+.projects:hover{
+  cursor: pointer;
+  transform: scale(1.1);
 }
